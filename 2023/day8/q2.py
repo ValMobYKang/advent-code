@@ -16,4 +16,4 @@ def count_step(step:str)->int:
 
 start_steps =  dict(map(lambda x:(x,1),re.findall(r'\w\wA'," ".join(mappings.keys()))))
 result = lcm(*[count_step(k) for k in start_steps.keys()])
-print(result)
+print([count_step(k) for k in start_steps.keys()])
